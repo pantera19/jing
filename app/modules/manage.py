@@ -280,7 +280,7 @@ class plant_preview(ManageBaseHandler):
             draw.text((810, 848), str(int(sign_time[1])), font=font, fill=color)
             draw.text((865, 848), str(int(sign_time[2])), font=font, fill=color)
 
-            qr = qrcode.make("http://localhost:8009/manage/plant_preview?id=" + str(id))
+            qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
             img = logo_watermark(image, qr)
             stream = StringIO()
             img.save(stream, 'JPEG')
@@ -344,7 +344,7 @@ class plant_print(ManageBaseHandler):
             draw.text((810, 848), str(int(sign_time[1])), font=font, fill=color)
             draw.text((865, 848), str(int(sign_time[2])), font=font, fill=color)
 
-            qr = qrcode.make("http://localhost:8009/manage/plant_preview?id=" + str(id))
+            qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
             img = logo_watermark(image, qr)
             stream = StringIO()
             img.save(stream, 'JPEG')
@@ -357,7 +357,7 @@ class plant_print(ManageBaseHandler):
 class plant_qr(ManageBaseHandler):
     def get(self):
         id = self.get_argument('id')
-        image = qrcode.make("http://localhost:8009/manage/plant_preview?id=" + id)
+        image = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + id)
         stream = StringIO()
         image.save(stream, 'PNG')
         data = stream.getvalue()
