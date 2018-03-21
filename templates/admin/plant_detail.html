@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+
+{% block title %}植物检疫证书编辑{% end %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>植物检疫证书编辑</h1>
+    {% module Template("widget/return_back.html") %}
+</div>
+<div class="col-md-12 bs-example">
+    <form action="{{ reverse_url('plant_detail') }}?id={{ ct['id'] }}" class="form form-horizontal" method="post"
+          role="form">
+        <input class="form-control" id="id" name="id" type="hidden" value="{{ ct['id'] }}">
+
+        {% module Template("widget/text.html",title='No.',id='no',value=ct['no'],width='20') %}
+        <hr/>
+        {% module Template("widget/text.html",title='调运单位（人）及地址',id='address1',value=ct['address1'],width='50') %}
+        {% module Template("widget/text.html",title='调运&nbsp;（承办）&nbsp;人&nbsp;姓&nbsp;名',id='name1',value=ct['name1'],width='20')
+        %}
+        {% module Template("widget/text.html",title='身份证号码',id='id_number',value=ct['id_number'],width='26') %}
+        {% module Template("widget/text.html",title='联&nbsp;系&nbsp;电&nbsp;话',id='phone_number',value=ct['phone_number'],width='26')
+        %}
+        <hr/>
+        {% module Template("widget/text.html",title='收货人单位（人）及地址',id='address2',value=ct['address2'],width='50') %}
+        {% module Template("widget/text.html",title='植&nbsp;物&nbsp;或&nbsp;植&nbsp;物&nbsp;产&nbsp;品&nbsp;来&nbsp;源',id='source',value=ct['source'],width='50')
+        %}
+        <hr/>
+        {% module Template("widget/text.html",title='运&nbsp;输&nbsp;工&nbsp;具&nbsp;',id='tool',value=ct['tool'],width='30')
+        %}
+
+        <div class="form-group form-inline">
+            <label class="control-label" for="transport_address1">运输起讫自</label>
+            <input class="form-control" id="transport_address1" name="transport_address1" type="text"
+                   value="{{ ct['transport_address1'] }}" style="width: 25%">
+            <label class="control-label" for="transport_address2">经</label>
+            <input class="form-control" id="transport_address2" name="transport_address2" type="text"
+                   value="{{ ct['transport_address2'] }}" style="width: 25%">
+            <label class="control-label" for="transport_address3">至</label>
+            <input class="form-control" id="transport_address3" name="transport_address3" type="text"
+                   value="{{ ct['transport_address3'] }}" style="width: 25%">
+        </div>
+
+        <div class="form-group form-inline">
+            <label class="control-label" >有&nbsp;&nbsp;&nbsp;效&nbsp;&nbsp;&nbsp;&nbsp;期</label>
+            <select name="st_year">
+                {% for i in range(2010,2050)%}
+
+                    <option value="{{ i }}" {{ 'selected' if i == ct['start_year'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>年
+            <select name="st_month">
+                {% for i in range(1,12)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['start_month'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>月
+            <select  name="st_day">
+                {% for i in range(1,31)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['start_day'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>日
+
+            <label class="control-label" >至</label>
+            <select name="et_year">
+                {% for i in range(2010,2050)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['end_year'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>年
+            <select name="et_month">
+                {% for i in range(1,12)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['end_month'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>月
+            <select name="et_day">
+                {% for i in range(1,31)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['end_day'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>日
+        </div>
+
+        {% module Template("widget/text.html",title='经&nbsp;签&nbsp;发&nbsp;地&nbsp;',id='opinion',value=ct['opinion'],width='30')
+        %}
+        <div class="form-group form-inline">
+            <label class="control-label">签&nbsp;证&nbsp;日&nbsp;期&nbsp;</label>
+            <select name="sign_year">
+                {% for i in range(2010,2050)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['sign_year'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>年
+            <select name="sign_month">
+                {% for i in range(1,12)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['sign_month'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>月
+            <select name="sign_day">
+                {% for i in range(1,31)%}
+                <option value="{{ i }}" {{ 'selected' if i == ct['sign_day'] else '' }}>{{ i }}</option>
+                {% end %}
+            </select>日
+        </div>
+        <hr>
+        <input type="hidden" name="variety" id="variety" value="">
+        <div class="form-group ">
+            <table class="table table-condensed">
+                <tr>
+                    <th>序号</th>
+                    <th>植物产品名称</th>
+                    <th>品种</th>
+                    <th>规格</th>
+                    <th>单位</th>
+                    <th>数量</th>
+                    <th>备注</th>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="form-group ">
+            <input class="btn btn-default" id="submit" name="submit" type="submit" value="提交">
+        </div>
+    </form>
+
+
+</div>
+{% end %}
+
+{% block js %}
+<script>
+        function setHtml(){
+            var result = '';
+
+            {% if ct['variety'] %}
+            var obj = {% raw ct['variety'] %};
+
+            for (var i = 0; i < obj.length; i++) {
+                result = '<tr><td>' + (i+1) + '</td>';
+                for (var j = 1; j <= 6; j++) {
+                    result += '<td><input type="text" id="row-' + i + '-key-' + j + '" value="' + obj[i]["key" +j.toString()] + '" /></td>';
+                }
+                result += '</tr>';
+                $('.table-condensed tbody').append(result);
+            }
+            {% else %}
+            for (var i = 0; i < 10; i++) {
+                result = '<tr><td>' + i + '</td>';
+                for (var j = 1; j <= 6; j++) {
+                    result += '<td><input type="text" id="row-' + i + '-key-' + j + '" value="" /></td>';
+                }
+                result += '</tr>';
+                $('.table-condensed tbody').append(result);
+            }
+            {% end %}
+        }
+        $(function () {
+            setHtml();
+
+            $('.table-condensed input').keyup(function () {
+                var data = [];
+                for (var i = 0; i < 10; i++) {
+                    var _KeyVal = new Object();
+                    for (var j = 1; j <= 6; j++) {
+                        _KeyVal['key' + j] = $('#row-' + i + '-key-' + j).val();
+                    }
+                    data.push(_KeyVal);
+                }
+
+                $('#variety').val(JSON.stringify(data));
+            });
+            $('.table-condensed input').keyup();
+        });
+
+</script>
+{% end %}
