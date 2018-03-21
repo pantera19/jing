@@ -265,14 +265,14 @@ class plant_preview(ManageBaseHandler):
             draw.text((680, 275), _to_chinese4(int(end_time[1])), font=font, fill=color)
             draw.text((780, 275), _to_chinese4(int(end_time[2])), font=font, fill=color)
 
-            # 27
-            for i, v in enumerate(json.loads(ct['variety'])):
-                draw.text((60, 328 + i * 27), v['key1'], font=font, fill=color)
-                draw.text((220, 328 + i * 27), v['key2'], font=font, fill=color)
-                draw.text((380, 328 + i * 27), v['key3'], font=font, fill=color)
-                draw.text((500, 328 + i * 27), v['key4'], font=font, fill=color)
-                draw.text((630, 328 + i * 27), v['key5'], font=font, fill=color)
-                draw.text((760, 328 + i * 27), v['key6'], font=font, fill=color)
+            if ct['variety']:
+                for i, v in enumerate(json.loads(ct['variety'])):
+                    draw.text((60, 328 + i * 27), v['key1'], font=font, fill=color)
+                    draw.text((220, 328 + i * 27), v['key2'], font=font, fill=color)
+                    draw.text((380, 328 + i * 27), v['key3'], font=font, fill=color)
+                    draw.text((500, 328 + i * 27), v['key4'], font=font, fill=color)
+                    draw.text((630, 328 + i * 27), v['key5'], font=font, fill=color)
+                    draw.text((760, 328 + i * 27), v['key6'], font=font, fill=color)
 
             draw.text((480, 610), ct['opinion'], font=font, fill=color)
 
@@ -329,13 +329,14 @@ class plant_print(ManageBaseHandler):
             draw.text((680, 275), _to_chinese4(int(end_time[1])), font=font, fill=color)
             draw.text((780, 275), _to_chinese4(int(end_time[2])), font=font, fill=color)
 
-            for i, v in enumerate(json.loads(ct['variety'])):
-                draw.text((60, 328 + i * 27), v['key1'], font=font, fill=color)
-                draw.text((220, 328 + i * 27), v['key2'], font=font, fill=color)
-                draw.text((380, 328 + i * 27), v['key3'], font=font, fill=color)
-                draw.text((500, 328 + i * 27), v['key4'], font=font, fill=color)
-                draw.text((630, 328 + i * 27), v['key5'], font=font, fill=color)
-                draw.text((760, 328 + i * 27), v['key6'], font=font, fill=color)
+            if ct['variety']:
+                for i, v in enumerate(json.loads(ct['variety'])):
+                    draw.text((60, 328 + i * 27), v['key1'], font=font, fill=color)
+                    draw.text((220, 328 + i * 27), v['key2'], font=font, fill=color)
+                    draw.text((380, 328 + i * 27), v['key3'], font=font, fill=color)
+                    draw.text((500, 328 + i * 27), v['key4'], font=font, fill=color)
+                    draw.text((630, 328 + i * 27), v['key5'], font=font, fill=color)
+                    draw.text((760, 328 + i * 27), v['key6'], font=font, fill=color)
 
             draw.text((480, 610), ct['opinion'], font=font, fill=color)
 
