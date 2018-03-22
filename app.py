@@ -11,7 +11,8 @@ from tornado.options import define, options
 
 from app.modules.manage import MIndex, LogoutHandler, LoginHandler, ChangePasswordHandler
 
-from app.modules.manage import plant_list, plant_detail, plant_preview, plant_qr, plant_print, plant_state
+from app.modules.manage import plant_list, plant_detail, plant_preview, plant_qr, plant_print, plant_state, \
+    plant_preview_img
 
 define("port", default=8000, help="run on the given port", type=int)
 define("dev", type=bool, help="dev mode switch", default=True)
@@ -33,6 +34,7 @@ class Application(tornado.web.Application):
             (r"/manage/plant_print", plant_print, None, 'plant_print'),
             (r"/manage/plant_qr", plant_qr, None, 'plant_qr'),
             (r"/manage/plant_state", plant_state, None, 'plant_state'),
+            (r"/manage/plant_preview_img", plant_preview_img, None, 'plant_preview_img'),
 
         ]
 

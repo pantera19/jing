@@ -229,6 +229,12 @@ def logo_watermark(img, water_img):
 class plant_preview(ManageBaseHandler):
     def get(self):
         id = int(self.get_argument("id", 0))
+        self.render('admin/plant_prview.html', id=id)
+
+
+class plant_preview_img(ManageBaseHandler):
+    def get(self):
+        id = int(self.get_argument("id", 0))
         ct = self.application.db.get('select * from certificate where state=1 and id=%s', id)
 
         start_time = str(ct['start_time'])[:10].split('-')
@@ -288,6 +294,7 @@ class plant_preview(ManageBaseHandler):
             data = stream.getvalue()
             self.set_header("Content-Type", "image/JPEG")
             self.set_header("Content-Length", len(data))
+            self.set_header("title", '123')
         self.write(data)
 
 

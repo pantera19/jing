@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56846476">
-              <caret line="364" column="22" selection-start-line="364" selection-start-column="22" selection-end-line="364" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
                 <element signature="e#599#1241#0" expanded="false" />
                 <element signature="e#1267#1392#0" expanded="false" />
@@ -50,20 +50,40 @@
                 <element signature="e#2512#3233#0" expanded="false" />
                 <element signature="e#3277#3922#0" expanded="false" />
                 <element signature="e#3968#7897#0" expanded="false" />
-                <element signature="e#8202#11579#0" expanded="false" />
-                <marker date="1521712945893" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-                <marker date="1521712945893" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-                <marker date="1521712945893" expanded="true" signature="2984:3029" placeholder="update users... " />
-                <marker date="1521712945893" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-                <marker date="1521712945893" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-                <marker date="1521712945893" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-                <marker date="1521712945893" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-                <marker date="1521712945893" expanded="true" signature="7149:7444" placeholder="update certi... " />
-                <marker date="1521712945893" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-                <marker date="1521712945893" expanded="true" signature="8300:8349" placeholder="select * fro... certificate" />
-                <marker date="1521712945893" expanded="true" signature="11722:11771" placeholder="select * fro... certificate" />
-                <marker date="1521712945893" expanded="true" signature="15864:15907" placeholder="update certi... " />
+                <element signature="e#11832#15231#0" expanded="false" />
+                <marker date="1521714377398" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+                <marker date="1521714377398" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+                <marker date="1521714377398" expanded="true" signature="2984:3029" placeholder="update users... " />
+                <marker date="1521714377398" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+                <marker date="1521714377398" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+                <marker date="1521714377398" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+                <marker date="1521714377398" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+                <marker date="1521714377398" expanded="true" signature="7149:7444" placeholder="update certi... " />
+                <marker date="1521714377398" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+                <marker date="1521714377398" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
+                <marker date="1521714377398" expanded="true" signature="11930:11979" placeholder="select * fro... certificate" />
+                <marker date="1521714377398" expanded="true" signature="16072:16115" placeholder="update certi... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plant_prview.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/plant_prview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.121442124">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,8 +91,8 @@
       <file leaf-file-name="plant_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/plant_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state vertical-scroll-proportion="-5.12">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -80,10 +100,19 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/app/modules/manage.py" />
+        <option value="$PROJECT_DIR$/templates/admin/plant_prview.html" />
       </list>
     </option>
   </component>
@@ -152,7 +181,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -165,6 +240,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -420,7 +496,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23684211" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -472,19 +548,19 @@
             <element signature="e#2512#3233#0" expanded="false" />
             <element signature="e#3277#3922#0" expanded="false" />
             <element signature="e#3968#7897#0" expanded="false" />
-            <element signature="e#8202#11579#0" expanded="false" />
-            <marker date="1521712945893" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-            <marker date="1521712945893" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-            <marker date="1521712945893" expanded="true" signature="2984:3029" placeholder="update users... " />
-            <marker date="1521712945893" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-            <marker date="1521712945893" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="7149:7444" placeholder="update certi... " />
-            <marker date="1521712945893" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-            <marker date="1521712945893" expanded="true" signature="8300:8349" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="11722:11771" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="15864:15907" placeholder="update certi... " />
+            <element signature="e#11832#15231#0" expanded="false" />
+            <marker date="1521714377398" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+            <marker date="1521714377398" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+            <marker date="1521714377398" expanded="true" signature="2984:3029" placeholder="update users... " />
+            <marker date="1521714377398" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+            <marker date="1521714377398" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="7149:7444" placeholder="update certi... " />
+            <marker date="1521714377398" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+            <marker date="1521714377398" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="11930:11979" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="16072:16115" placeholder="update certi... " />
           </folding>
         </state>
       </provider>
@@ -518,17 +594,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6307054">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/jy.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding>
+            <element signature="e#599#1241#0" expanded="false" />
+            <element signature="e#1267#1392#0" expanded="false" />
+            <element signature="e#1442#1608#0" expanded="false" />
+            <element signature="e#1648#1757#0" expanded="false" />
+            <element signature="e#1803#2319#0" expanded="false" />
+            <element signature="e#2366#2457#0" expanded="false" />
+            <element signature="e#2512#3233#0" expanded="false" />
+            <element signature="e#3277#3922#0" expanded="false" />
+            <element signature="e#3968#7897#0" expanded="false" />
+            <element signature="e#11832#15231#0" expanded="false" />
+            <marker date="1521714377398" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+            <marker date="1521714377398" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+            <marker date="1521714377398" expanded="true" signature="2984:3029" placeholder="update users... " />
+            <marker date="1521714377398" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+            <marker date="1521714377398" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="7149:7444" placeholder="update certi... " />
+            <marker date="1521714377398" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+            <marker date="1521714377398" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="11930:11979" placeholder="select * fro... certificate" />
+            <marker date="1521714377398" expanded="true" signature="16072:16115" placeholder="update certi... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,45 +655,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/plant_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state vertical-scroll-proportion="-5.12">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/jy.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/manage.py">
+    <entry file="file://$PROJECT_DIR$/templates/admin/plant_prview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56846476">
-          <caret line="364" column="22" selection-start-line="364" selection-start-column="22" selection-end-line="364" selection-end-column="22" />
-          <folding>
-            <element signature="e#599#1241#0" expanded="false" />
-            <element signature="e#1267#1392#0" expanded="false" />
-            <element signature="e#1442#1608#0" expanded="false" />
-            <element signature="e#1648#1757#0" expanded="false" />
-            <element signature="e#1803#2319#0" expanded="false" />
-            <element signature="e#2366#2457#0" expanded="false" />
-            <element signature="e#2512#3233#0" expanded="false" />
-            <element signature="e#3277#3922#0" expanded="false" />
-            <element signature="e#3968#7897#0" expanded="false" />
-            <element signature="e#8202#11579#0" expanded="false" />
-            <marker date="1521712945893" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-            <marker date="1521712945893" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-            <marker date="1521712945893" expanded="true" signature="2984:3029" placeholder="update users... " />
-            <marker date="1521712945893" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-            <marker date="1521712945893" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="7149:7444" placeholder="update certi... " />
-            <marker date="1521712945893" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-            <marker date="1521712945893" expanded="true" signature="8300:8349" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="11722:11771" placeholder="select * fro... certificate" />
-            <marker date="1521712945893" expanded="true" signature="15864:15907" placeholder="update certi... " />
-          </folding>
+        <state vertical-scroll-proportion="0.121442124">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
