@@ -222,7 +222,7 @@ def logo_watermark(img, water_img):
     bw, bh = baseim.size
     lw, lh = water_img.size
     water_img = water_img.resize((80, 80))
-    baseim.paste(water_img, (560, 20))
+    baseim.paste(water_img, (570, 20))
     return baseim
 
 
@@ -306,17 +306,17 @@ class plant_print(ManageBaseHandler):
             font = ImageFont.truetype('static/simsun.ttf', 14)
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
-            draw.text((440, 158), u'冀', font=font, fill=color)
+            draw.text((450, 158), u'冀', font=font, fill=color)
             #draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
 
             draw.text((180, 185), ct['address1'], font=font, fill=color)
             draw.text((180, 213), ct['name1'], font=font, fill=color)
             draw.text((348, 213), ct['id_number'][:6]+ len(ct['id_number'][6:-4])*'*'+ct['id_number'][-4:], font=font, fill=color)
-            draw.text((535, 213), ct['phone_number'], font=font, fill=color)
+            draw.text((540, 213), ct['phone_number'], font=font, fill=color)
 
             draw.text((180, 240), ct['address2'], font=font, fill=color)
             draw.text((180, 265), ct['source'], font=font, fill=color)
-            draw.text((535, 265), ct['tool'], font=font, fill=color)
+            draw.text((540, 265), ct['tool'], font=font, fill=color)
 
             draw.text((145, 293), ct['transport_address1'], font=font, fill=color)
             draw.text((335, 293), ct['transport_address2'], font=font, fill=color)
@@ -341,8 +341,8 @@ class plant_print(ManageBaseHandler):
             draw.text((420, 655), ct['opinion'], font=font, fill=color)
 
             draw.text((450, 847), str(int(sign_time[0])), font=font, fill=color)
-            draw.text((510, 847), str(int(sign_time[1])), font=font, fill=color)
-            draw.text((550, 847), str(int(sign_time[2])), font=font, fill=color)
+            draw.text((520, 847), str(int(sign_time[1])), font=font, fill=color)
+            draw.text((565, 847), str(int(sign_time[2])), font=font, fill=color)
 
             qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
             img = logo_watermark(image, qr)
