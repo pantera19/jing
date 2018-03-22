@@ -243,11 +243,12 @@ class plant_preview(ManageBaseHandler):
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
             draw.text((440, 158), u'冀', font=font, fill=color)
-            draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
+            draw.text((500, 158), 'No.' + ct['no'], font=font, fill=color)
 
             draw.text((180, 185), ct['address1'], font=font, fill=color)
             draw.text((180, 213), ct['name1'], font=font, fill=color)
-            draw.text((348, 213), ct['id_number'][:6]+ len(ct['id_number'][6:-4])*'*'+ct['id_number'][-4:], font=font, fill=color)
+            draw.text((348, 213), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
+                      font=font, fill=color)
             draw.text((535, 213), ct['phone_number'], font=font, fill=color)
 
             draw.text((180, 240), ct['address2'], font=font, fill=color)
@@ -307,11 +308,12 @@ class plant_print(ManageBaseHandler):
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
             draw.text((447, 161), u'冀', font=font, fill=color)
-            #draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
+            # draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
 
             draw.text((180, 185), ct['address1'], font=font, fill=color)
             draw.text((180, 213), ct['name1'], font=font, fill=color)
-            draw.text((348, 213), ct['id_number'][:6]+ len(ct['id_number'][6:-4])*'*'+ct['id_number'][-4:], font=font, fill=color)
+            draw.text((348, 213), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
+                      font=font, fill=color)
             draw.text((538, 213), ct['phone_number'], font=font, fill=color)
 
             draw.text((180, 240), ct['address2'], font=font, fill=color)
@@ -357,7 +359,15 @@ class plant_print(ManageBaseHandler):
 class plant_qr(ManageBaseHandler):
     def get(self):
         id = self.get_argument('id')
-        image = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + id)
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=3,
+            border=1,
+        )
+        qr.add_data("http://www.liagou.top:8009/manage/plant_preview?id=" + id)
+        qr.make(fit=True)
+        image = qr.make_image()
         stream = StringIO()
         image.save(stream, 'PNG')
         data = stream.getvalue()
