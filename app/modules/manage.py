@@ -287,10 +287,10 @@ class plant_preview_img(ManageBaseHandler):
             draw.text((510, 847), str(int(sign_time[1])), font=font, fill=color)
             draw.text((550, 847), str(int(sign_time[2])), font=font, fill=color)
 
-            qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
-            img = logo_watermark(image, qr)
+            #qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
+            #img = logo_watermark(image, qr)
             stream = StringIO()
-            img.save(stream, 'JPEG')
+            image.save(stream, 'JPEG')
             data = stream.getvalue()
             self.set_header("Content-Type", "image/JPEG")
             self.set_header("Content-Length", len(data))
