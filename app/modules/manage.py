@@ -221,8 +221,8 @@ def logo_watermark(img, water_img):
     baseim = img
     bw, bh = baseim.size
     lw, lh = water_img.size
-    water_img = water_img.resize((80, 80))
-    baseim.paste(water_img, (570, 50))
+    water_img = water_img.resize((100, 100))
+    baseim.paste(water_img, (550, 30))
     return baseim
 
 
