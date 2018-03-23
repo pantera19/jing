@@ -14,7 +14,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/jing$app.coverage" NAME="app Coverage Results" MODIFIED="1521699839540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jing$app.coverage" NAME="app Coverage Results" MODIFIED="1521770592737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51449275">
-              <caret line="289" column="13" selection-start-line="289" selection-start-column="13" selection-end-line="289" selection-end-column="13" />
+            <state vertical-scroll-proportion="17.555555">
+              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
               <folding>
                 <element signature="e#599#1241#0" expanded="false" />
                 <element signature="e#1267#1392#0" expanded="false" />
@@ -50,20 +50,30 @@
                 <element signature="e#2512#3233#0" expanded="false" />
                 <element signature="e#3277#3922#0" expanded="false" />
                 <element signature="e#3968#7897#0" expanded="false" />
-                <element signature="e#11836#15235#0" expanded="false" />
-                <marker date="1521714696662" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-                <marker date="1521714696662" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-                <marker date="1521714696662" expanded="true" signature="2984:3029" placeholder="update users... " />
-                <marker date="1521714696662" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-                <marker date="1521714696662" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-                <marker date="1521714696662" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-                <marker date="1521714696662" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-                <marker date="1521714696662" expanded="true" signature="7149:7444" placeholder="update certi... " />
-                <marker date="1521714696662" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-                <marker date="1521714696662" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
-                <marker date="1521714696662" expanded="true" signature="11934:11983" placeholder="select * fro... certificate" />
-                <marker date="1521714696662" expanded="true" signature="16076:16119" placeholder="update certi... " />
+                <element signature="e#12090#15746#0" expanded="false" />
+                <marker date="1521771502201" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+                <marker date="1521771502201" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+                <marker date="1521771502201" expanded="true" signature="2984:3029" placeholder="update users... " />
+                <marker date="1521771502201" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+                <marker date="1521771502201" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+                <marker date="1521771502201" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+                <marker date="1521771502201" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+                <marker date="1521771502201" expanded="true" signature="7149:7444" placeholder="update certi... " />
+                <marker date="1521771502201" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+                <marker date="1521771502201" expanded="true" signature="8479:8528" placeholder="select * fro... certificate" />
+                <marker date="1521771502201" expanded="true" signature="12188:12237" placeholder="select * fro... certificate" />
+                <marker date="1521771502201" expanded="true" signature="16587:16630" placeholder="update certi... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageFont.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/PIL/ImageFont.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plant_prview.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plant_prview.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/plant_prview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.56">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.1821632">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -111,8 +121,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/templates/admin/plant_prview.html" />
         <option value="$PROJECT_DIR$/app/modules/manage.py" />
+        <option value="$PROJECT_DIR$/templates/admin/plant_prview.html" />
       </list>
     </option>
   </component>
@@ -490,13 +500,13 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1423462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23684211" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23684211" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -548,19 +558,19 @@
             <element signature="e#2512#3233#0" expanded="false" />
             <element signature="e#3277#3922#0" expanded="false" />
             <element signature="e#3968#7897#0" expanded="false" />
-            <element signature="e#11836#15235#0" expanded="false" />
-            <marker date="1521714696662" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-            <marker date="1521714696662" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-            <marker date="1521714696662" expanded="true" signature="2984:3029" placeholder="update users... " />
-            <marker date="1521714696662" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-            <marker date="1521714696662" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="7149:7444" placeholder="update certi... " />
-            <marker date="1521714696662" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-            <marker date="1521714696662" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="11934:11983" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="16076:16119" placeholder="update certi... " />
+            <element signature="e#12090#15746#0" expanded="false" />
+            <marker date="1521771502201" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+            <marker date="1521771502201" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+            <marker date="1521771502201" expanded="true" signature="2984:3029" placeholder="update users... " />
+            <marker date="1521771502201" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+            <marker date="1521771502201" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="7149:7444" placeholder="update certi... " />
+            <marker date="1521771502201" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+            <marker date="1521771502201" expanded="true" signature="8479:8528" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="12188:12237" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="16587:16630" placeholder="update certi... " />
           </folding>
         </state>
       </provider>
@@ -601,11 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/jy.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -630,18 +635,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/plant_prview.html">
+    <entry file="file:///usr/local/lib/python2.7/site-packages/PIL/ImageFont.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.56">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/jy.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/jy.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51449275">
-          <caret line="289" column="13" selection-start-line="289" selection-start-column="13" selection-end-line="289" selection-end-column="13" />
+        <state vertical-scroll-proportion="17.555555">
+          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
           <folding>
             <element signature="e#599#1241#0" expanded="false" />
             <element signature="e#1267#1392#0" expanded="false" />
@@ -652,20 +667,28 @@
             <element signature="e#2512#3233#0" expanded="false" />
             <element signature="e#3277#3922#0" expanded="false" />
             <element signature="e#3968#7897#0" expanded="false" />
-            <element signature="e#11836#15235#0" expanded="false" />
-            <marker date="1521714696662" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
-            <marker date="1521714696662" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
-            <marker date="1521714696662" expanded="true" signature="2984:3029" placeholder="update users... " />
-            <marker date="1521714696662" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
-            <marker date="1521714696662" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="7149:7444" placeholder="update certi... " />
-            <marker date="1521714696662" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
-            <marker date="1521714696662" expanded="true" signature="8464:8513" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="11934:11983" placeholder="select * fro... certificate" />
-            <marker date="1521714696662" expanded="true" signature="16076:16119" placeholder="update certi... " />
+            <element signature="e#12090#15746#0" expanded="false" />
+            <marker date="1521771502201" expanded="true" signature="2018:2055" placeholder="select * fro... users" />
+            <marker date="1521771502201" expanded="true" signature="2800:2837" placeholder="select * fro... users" />
+            <marker date="1521771502201" expanded="true" signature="2984:3029" placeholder="update users... " />
+            <marker date="1521771502201" expanded="true" signature="3493:3544" placeholder="select count... certificate" />
+            <marker date="1521771502201" expanded="true" signature="3588:3656" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="4097:4146" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="6851:6888" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="7149:7444" placeholder="update certi... " />
+            <marker date="1521771502201" expanded="true" signature="7513:7793" placeholder="insert into certificate... " />
+            <marker date="1521771502201" expanded="true" signature="8479:8528" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="12188:12237" placeholder="select * fro... certificate" />
+            <marker date="1521771502201" expanded="true" signature="16587:16630" placeholder="update certi... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/plant_prview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1821632">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

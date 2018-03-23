@@ -214,15 +214,15 @@ class plant_detail(ManageBaseHandler):
         self.redirect('/manage/plant_list')
 
 
-def logo_watermark(img, water_img):
+def logo_watermark(img, water_img, p):
     '''''
     添加一个图片水印,原理就是合并图层，用png比较好
     '''
     baseim = img
     bw, bh = baseim.size
     lw, lh = water_img.size
-    water_img = water_img.resize((100, 100))
-    baseim.paste(water_img, (550, 30))
+    water_img = water_img.resize((100*p, 100*p))
+    baseim.paste(water_img, (550 * p, 30 * p))
     return baseim
 
 
@@ -241,54 +241,55 @@ class plant_preview_img(ManageBaseHandler):
         end_time = str(ct['end_time'])[:10].split('-')
         sign_time = str(ct['sign_time'])[:10].split('-')
 
+        p = 2
         data = u'暂无数据'
         if ct:
             image = Image.open('static/jy.jpg')
-
-            font = ImageFont.truetype('static/simsun.ttf', 12)
+            print image.size
+            font = ImageFont.truetype('static/simsun.ttf', 12* p)
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
-            draw.text((440, 158), u'冀', font=font, fill=color)
-            draw.text((500, 158), 'No.' + ct['no'], font=font, fill=color)
+            draw.text((440* p, 158* p), u'冀', font=font, fill=color)
+            draw.text((500* p, 158* p), 'No.' + ct['no'], font=font, fill=color)
 
-            draw.text((180, 185), ct['address1'], font=font, fill=color)
-            draw.text((180, 213), ct['name1'], font=font, fill=color)
-            draw.text((348, 213), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
+            draw.text((180* p, 185* p), ct['address1'], font=font, fill=color)
+            draw.text((180* p, 213* p), ct['name1'], font=font, fill=color)
+            draw.text((348* p, 213* p), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
                       font=font, fill=color)
-            draw.text((535, 213), ct['phone_number'], font=font, fill=color)
+            draw.text((535* p, 213* p), ct['phone_number'], font=font, fill=color)
 
-            draw.text((180, 240), ct['address2'], font=font, fill=color)
-            draw.text((180, 265), ct['source'], font=font, fill=color)
-            draw.text((535, 265), ct['tool'], font=font, fill=color)
+            draw.text((180* p, 240* p), ct['address2'], font=font, fill=color)
+            draw.text((180* p, 265* p), ct['source'], font=font, fill=color)
+            draw.text((535* p, 265* p), ct['tool'], font=font, fill=color)
 
-            draw.text((145, 293), ct['transport_address1'], font=font, fill=color)
-            draw.text((335, 293), ct['transport_address2'], font=font, fill=color)
-            draw.text((445, 293), ct['transport_address3'], font=font, fill=color)
+            draw.text((145* p, 293* p), ct['transport_address1'], font=font, fill=color)
+            draw.text((335* p, 293* p), ct['transport_address2'], font=font, fill=color)
+            draw.text((445* p, 293* p), ct['transport_address3'], font=font, fill=color)
 
-            draw.text((145, 320), _ZWYear(str(int(start_time[0]))), font=font, fill=color)
-            draw.text((245, 320), _to_chinese4(int(start_time[1])), font=font, fill=color)
-            draw.text((310, 320), _to_chinese4(int(start_time[2])), font=font, fill=color)
-            draw.text((390, 320), _ZWYear(str(int(end_time[0]))), font=font, fill=color)
-            draw.text((490, 320), _to_chinese4(int(end_time[1])), font=font, fill=color)
-            draw.text((550, 320), _to_chinese4(int(end_time[2])), font=font, fill=color)
+            draw.text((145* p, 320* p), _ZWYear(str(int(start_time[0]))), font=font, fill=color)
+            draw.text((245* p, 320* p), _to_chinese4(int(start_time[1])), font=font, fill=color)
+            draw.text((310* p, 320* p), _to_chinese4(int(start_time[2])), font=font, fill=color)
+            draw.text((390* p, 320* p), _ZWYear(str(int(end_time[0]))), font=font, fill=color)
+            draw.text((490* p, 320* p), _to_chinese4(int(end_time[1])), font=font, fill=color)
+            draw.text((550* p, 320* p), _to_chinese4(int(end_time[2])), font=font, fill=color)
 
             if ct['variety']:
                 for i, v in enumerate(json.loads(ct['variety'])):
-                    draw.text((60, 375 + i * 27), v['key1'], font=font, fill=color)
-                    draw.text((200, 375 + i * 27), v['key2'], font=font, fill=color)
-                    draw.text((350, 375 + i * 27), v['key3'], font=font, fill=color)
-                    draw.text((410, 375 + i * 27), v['key4'], font=font, fill=color)
-                    draw.text((480, 375 + i * 27), v['key5'], font=font, fill=color)
-                    draw.text((550, 375 + i * 27), v['key6'], font=font, fill=color)
+                    draw.text((60 * p, (375 + i * 26) * p), v['key1'], font=font, fill=color)
+                    draw.text((200 * p, (375 + i * 26) * p), v['key2'], font=font, fill=color)
+                    draw.text((350 * p, (375 + i * 26) * p), v['key3'], font=font, fill=color)
+                    draw.text((410 * p, (375 + i * 26) * p), v['key4'], font=font, fill=color)
+                    draw.text((480 * p, (375 + i * 26) * p), v['key5'], font=font, fill=color)
+                    draw.text((550 * p, (375 + i * 26) * p), v['key6'], font=font, fill=color)
 
-            draw.text((420, 655), ct['opinion'], font=font, fill=color)
+            draw.text((420* p, 655* p), ct['opinion'], font=font, fill=color)
 
-            draw.text((450, 847), str(int(sign_time[0])), font=font, fill=color)
-            draw.text((510, 847), str(int(sign_time[1])), font=font, fill=color)
-            draw.text((550, 847), str(int(sign_time[2])), font=font, fill=color)
+            draw.text((450* p, 847* p), str(int(sign_time[0])), font=font, fill=color)
+            draw.text((510* p, 847* p), str(int(sign_time[1])), font=font, fill=color)
+            draw.text((550* p, 847* p), str(int(sign_time[2])), font=font, fill=color)
 
-            #qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
-            #img = logo_watermark(image, qr)
+            # qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
+            # img = logo_watermark(image, qr)
             stream = StringIO()
             image.save(stream, 'JPEG')
             data = stream.getvalue()
@@ -307,54 +308,55 @@ class plant_print(ManageBaseHandler):
         end_time = str(ct['end_time'])[:10].split('-')
         sign_time = str(ct['sign_time'])[:10].split('-')
 
+        p = 5
         data = u'暂无数据'
         if ct:
-            image = Image.new('RGB', (676, 1012), (255, 255, 255, 0))
+            image = Image.new('RGB', (676 * p, 1012 * p), (255, 255, 255, 0))
 
-            font = ImageFont.truetype('static/simsun.ttf', 14)
+            font = ImageFont.truetype('static/simsun.ttf', 14 * p)
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
-            draw.text((447, 161), u'冀', font=font, fill=color)
+            draw.text((447 * p, 161 * p), u'冀', font=font, fill=color)
             # draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
 
-            draw.text((180, 185), ct['address1'], font=font, fill=color)
-            draw.text((180, 213), ct['name1'], font=font, fill=color)
-            draw.text((348, 213), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
+            draw.text((180 * p, 185 * p), ct['address1'], font=font, fill=color)
+            draw.text((180 * p, 213 * p), ct['name1'], font=font, fill=color)
+            draw.text((348 * p, 213 * p), ct['id_number'][:6] + len(ct['id_number'][6:-4]) * '*' + ct['id_number'][-4:],
                       font=font, fill=color)
-            draw.text((538, 213), ct['phone_number'], font=font, fill=color)
+            draw.text((538 * p, 213 * p), ct['phone_number'], font=font, fill=color)
 
-            draw.text((180, 240), ct['address2'], font=font, fill=color)
-            draw.text((180, 265), ct['source'], font=font, fill=color)
-            draw.text((538, 265), ct['tool'], font=font, fill=color)
+            draw.text((180 * p, 240 * p), ct['address2'], font=font, fill=color)
+            draw.text((180 * p, 265 * p), ct['source'], font=font, fill=color)
+            draw.text((538 * p, 265 * p), ct['tool'], font=font, fill=color)
 
-            draw.text((145, 293), ct['transport_address1'], font=font, fill=color)
-            draw.text((335, 293), ct['transport_address2'], font=font, fill=color)
-            draw.text((445, 293), ct['transport_address3'], font=font, fill=color)
+            draw.text((145 * p, 293 * p), ct['transport_address1'], font=font, fill=color)
+            draw.text((335 * p, 293 * p), ct['transport_address2'], font=font, fill=color)
+            draw.text((445 * p, 293 * p), ct['transport_address3'], font=font, fill=color)
 
-            draw.text((145, 320), _ZWYear(str(int(start_time[0]))), font=font, fill=color)
-            draw.text((245, 320), _to_chinese4(int(start_time[1])), font=font, fill=color)
-            draw.text((310, 320), _to_chinese4(int(start_time[2])), font=font, fill=color)
-            draw.text((390, 320), _ZWYear(str(int(end_time[0]))), font=font, fill=color)
-            draw.text((490, 320), _to_chinese4(int(end_time[1])), font=font, fill=color)
-            draw.text((550, 320), _to_chinese4(int(end_time[2])), font=font, fill=color)
+            draw.text((145 * p, 320 * p), _ZWYear(str(int(start_time[0]))), font=font, fill=color)
+            draw.text((245 * p, 320 * p), _to_chinese4(int(start_time[1])), font=font, fill=color)
+            draw.text((310 * p, 320 * p), _to_chinese4(int(start_time[2])), font=font, fill=color)
+            draw.text((390 * p, 320 * p), _ZWYear(str(int(end_time[0]))), font=font, fill=color)
+            draw.text((490 * p, 320 * p), _to_chinese4(int(end_time[1])), font=font, fill=color)
+            draw.text((550 * p, 320 * p), _to_chinese4(int(end_time[2])), font=font, fill=color)
 
             if ct['variety']:
                 for i, v in enumerate(json.loads(ct['variety'])):
-                    draw.text((60, 375 + i * 26), v['key1'], font=font, fill=color)
-                    draw.text((200, 375 + i * 26), v['key2'], font=font, fill=color)
-                    draw.text((350, 375 + i * 26), v['key3'], font=font, fill=color)
-                    draw.text((410, 375 + i * 26), v['key4'], font=font, fill=color)
-                    draw.text((480, 375 + i * 26), v['key5'], font=font, fill=color)
-                    draw.text((550, 375 + i * 26), v['key6'], font=font, fill=color)
+                    draw.text((60 * p, (375 + i * 26) * p), v['key1'], font=font, fill=color)
+                    draw.text((200 * p, (375 + i * 26) * p), v['key2'], font=font, fill=color)
+                    draw.text((350 * p, (375 + i * 26) * p), v['key3'], font=font, fill=color)
+                    draw.text((410 * p, (375 + i * 26) * p), v['key4'], font=font, fill=color)
+                    draw.text((480 * p, (375 + i * 26) * p), v['key5'], font=font, fill=color)
+                    draw.text((550 * p, (375 + i * 26) * p), v['key6'], font=font, fill=color)
 
-            draw.text((420, 645), ct['opinion'], font=font, fill=color)
+            draw.text((420 * p, 645 * p), ct['opinion'], font=font, fill=color)
 
-            draw.text((450, 825), str(int(sign_time[0])), font=font, fill=color)
-            draw.text((520, 825), str(int(sign_time[1])), font=font, fill=color)
-            draw.text((565, 825), str(int(sign_time[2])), font=font, fill=color)
+            draw.text((450 * p, 825 * p), str(int(sign_time[0])), font=font, fill=color)
+            draw.text((520 * p, 825 * p), str(int(sign_time[1])), font=font, fill=color)
+            draw.text((565 * p, 825 * p), str(int(sign_time[2])), font=font, fill=color)
 
             qr = qrcode.make("http://www.liagou.top:8009/manage/plant_preview?id=" + str(id))
-            img = logo_watermark(image, qr)
+            img = logo_watermark(image, qr, p)
             stream = StringIO()
             img.save(stream, 'JPEG')
             data = stream.getvalue()
