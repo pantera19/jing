@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <title>植物检疫证书</title>
 </head>
-<body>
-<img src="/manage/plant_preview_img?id={{ id }}" width="100%">
+<style>
+    img {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+</style>
+<body style="text-align: center">
+<img ID="sss" src="/manage/plant_preview_img?id={{ id }}">
 </body>
 </html>
