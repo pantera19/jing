@@ -132,7 +132,7 @@ class plant_detail(ManageBaseHandler):
         id = int(self.get_argument("id", 0))
         ct = self.application.db.get('select * from certificate where state=1 and id=%s', id)
         if not ct:
-            keys = ['no', 'address1', 'name1', 'id_number', 'phone_number', 'address2', 'source', 'tool',
+            keys = ['area','no', 'address1', 'name1', 'id_number', 'phone_number', 'address2', 'source', 'tool',
                     'transport_address1',
                     'transport_address2', 'transport_address3', 'start_time', 'end_time', 'variety', 'opinion',
                     'sign_time', 'start_year', 'start_month', 'start_day', 'end_year', 'end_month', 'end_day',
@@ -163,6 +163,7 @@ class plant_detail(ManageBaseHandler):
     def post(self):
 
         id = int(self.get_argument('id', 0))
+        area = self.get_argument('area','')
         no = self.get_argument('no', '')
         address1 = self.get_argument('address1', '')
         name1 = self.get_argument('name1', '')
@@ -199,16 +200,16 @@ class plant_detail(ManageBaseHandler):
 
         ct = self.application.db.get('select * from certificate where id=%s', id)
 
-        params = [no, address1, name1, id_number, phone_number, address2, source, tool, transport_address1,
+        params = [area, no, address1, name1, id_number, phone_number, address2, source, tool, transport_address1,
                   transport_address2, transport_address3, start_time, end_time, variety, opinion, sign_time]
         if ct:
-            sql = '''update certificate set `no`=%s,address1=%s,name1=%s,id_number=%s,phone_number=%s,address2=%s,source=%s,
+            sql = '''update certificate set area=%s,`no`=%s,address1=%s,name1=%s,id_number=%s,phone_number=%s,address2=%s,source=%s,
                       tool=%s,transport_address1=%s,transport_address2=%s,transport_address3=%s,start_time=%s,end_time=%s,
                       variety=%s,opinion=%s,sign_time=%s where id=%s'''
             params.append(id)
         else:
-            sql = '''insert into certificate(`no`, address1, name1, id_number, phone_number, address2, source, tool, transport_address1,
-                  transport_address2, transport_address3, start_time, end_time, variety, opinion, sign_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+            sql = '''insert into certificate(area,`no`, address1, name1, id_number, phone_number, address2, source, tool, transport_address1,
+                  transport_address2, transport_address3, start_time, end_time, variety, opinion, sign_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
 
         ret = self.application.db.execute(sql, *params)
         self.redirect('/manage/plant_list')
@@ -249,7 +250,7 @@ class plant_preview_img(ManageBaseHandler):
             font = ImageFont.truetype('static/simsun.ttf', 12 * p)
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
-            draw.text((440 * p, 158 * p), u'冀', font=font, fill=color)
+            draw.text((440 * p, 158 * p), ct['area'], font=font, fill=color)
             draw.text((500 * p, 158 * p), 'No.' + ct['no'], font=font, fill=color)
 
             draw.text((180 * p, 185 * p), ct['address1'], font=font, fill=color)
@@ -316,7 +317,7 @@ class plant_print(ManageBaseHandler):
             font = ImageFont.truetype('static/simsun.ttf', 14 * p)
             color = '#0000CD'
             draw = ImageDraw.Draw(image)
-            draw.text((447 * p, 161 * p), u'冀', font=font, fill=color)
+            draw.text((447 * p, 161 * p), ct['area'], font=font, fill=color)
             # draw.text((500, 158), 'No.'+ct['no'], font=font, fill=color)
 
             draw.text((180 * p, 185 * p), ct['address1'], font=font, fill=color)

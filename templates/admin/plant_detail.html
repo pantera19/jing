@@ -13,7 +13,7 @@
     <form action="{{ reverse_url('plant_detail') }}?id={{ ct['id'] }}" class="form form-horizontal" method="post"
           role="form">
         <input class="form-control" id="id" name="id" type="hidden" value="{{ ct['id'] }}">
-
+	{% module Template("widget/text.html",title='区域',id='area',value=ct['area'],width='20') %}
         {% module Template("widget/text.html",title='No.',id='no',value=ct['no'],width='20') %}
         <hr/>
         {% module Template("widget/text.html",title='调运单位（人）及地址',id='address1',value=ct['address1'],width='50') %}
